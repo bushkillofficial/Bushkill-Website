@@ -33,9 +33,9 @@ links.querySelectorAll('a').forEach(a => {
 /* ─────────────────────────────────────────
    TRACKLIST — click to activate
 ───────────────────────────────────────── */
-document.querySelectorAll('.tracklist__item').forEach(item => {
+document.querySelectorAll('.songlist__item').forEach(item => {
   item.addEventListener('click', () => {
-    document.querySelectorAll('.tracklist__item').forEach(i => i.classList.remove('active'));
+    document.querySelectorAll('.songlist__item').forEach(i => i.classList.remove('active'));
     item.classList.add('active');
   });
 });
@@ -54,7 +54,7 @@ function handleSubscribe(e) {
    SCROLL REVEAL — fade-in on scroll
 ───────────────────────────────────────── */
 const revealEls = document.querySelectorAll(
-  '.tour-item, .merch-card, .photo-card, .platform-btn, .member, .tracklist__item'
+  '.tour-item, .merch-card, .photo-card, .platform-btn, .member, .songlist__item'
 );
 
 const observer = new IntersectionObserver((entries) => {
