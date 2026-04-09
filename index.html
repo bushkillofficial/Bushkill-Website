@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUSHKILL — Debut EP "Never Not Blood"</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ───── NAV ───── -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo"><img src="Photos/Bushkill Logo - Clear.png" alt="Bushkill"></div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#tour">Tour</a></li>
+      <li><a href="#merch">Merch</a></li>
+      <li><a href="#listen" class="nav__cta">Listen Now</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__band-name">BUSHKILL</p>
+      <p class="hero__formerly">— Formerly The Degens</p>
+      <p class="hero__eyebrow">Debut EP — Out Now</p>
+      <h1 class="hero__title">NEVER NOT<br>BLOOD</h1>
+      <p class="hero__sub">Six tracks. Five guys. Zero filters.<br>We held it in long enough.</p>
+      <div class="hero__actions">
+        <a href="#listen" class="btn btn--primary">Stream / Download</a>
+        <a href="#tour" class="btn btn--ghost">See Tour Dates</a>
+      </div>
+    </div>
+    <div class="hero__scroll">Scroll</div>
+  </section>
+
+  <!-- ───── LISTEN ───── -->
+  <section class="listen" id="listen">
+    <div class="container">
+      <h2 class="section-title">Listen to <span>Never Not Blood</span></h2>
+      <p class="section-sub">Available on all major platforms...</p>
+      <div class="platforms">
+        <a href="https://open.spotify.com/artist/7tLMjeKVvCEmlQkwwB6yOu?si=Ss2PYlq4R4SSPa1SwleepQ" class="platform-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Spotify
+        </a>
+        <a href="https://music.apple.com/us/artist/bushkill/1876282710" class="platform-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.459 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          Apple Music
+        </a>
+        <a href="https://www.youtube.com/@BushkillOfficial" class="platform-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm-1.8 16.8V7.2l7.2 4.8-7.2 4.8z"/></svg>
+          YouTube
+        </a>
+        <a href="https://music.amazon.com/artists/B0GMS5PM6N/bushkill?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_skDFvn1IA3D13S4PtQHZgBr6j" class="platform-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h1v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-2v8h1c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>
+          Amazon Music
+        </a>
+        <a href="https://www.tiktok.com/@bushkillofficial?_r=1&_t=zp-925hu0gnsal" class="platform-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          TikTok
+        </a>
+      </div>
+
+      <!-- Embedded player placeholder -->
+      <div class="player-placeholder">
+        <div class="player-art">
+          <img src="Photos/Bushkill EP Cover.png" alt="Never Not Blood EP Cover" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        </div>
+        <div class="player-tracks">
+          <p class="player-tracks__label">Never Not Blood — Track Listing</p>
+          <ol class="tracklist">
+            <li class="tracklist__item active"><span class="track-num">01</span><span class="track-name">Homicidal Queen</span><span class="track-dur">3:47</span></li>
+            <li class="tracklist__item"><span class="track-num">02</span><span class="track-name">Curley's Diner 2</span><span class="track-dur">4:12</span></li>
+            <li class="tracklist__item"><span class="track-num">03</span><span class="track-name">Drifting Away</span><span class="track-dur">3:29</span></li>
+            <li class="tracklist__item"><span class="track-num">04</span><span class="track-name">Hit This</span><span class="track-dur">5:01</span></li>
+            <li class="tracklist__item"><span class="track-num">05</span><span class="track-name">Landing Strip</span><span class="track-dur">4:38</span></li>
+            <li class="tracklist__item"><span class="track-num">06</span><span class="track-name">Snoopy</span><span class="track-dur">3:55</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── ABOUT ───── -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <h2 class="section-title">About the Band</h2>
+        <p>Born from the wastewater runoff in Easton, PA...</p>
+        <div class="members">
+          <div class="member">
+            <div class="member__avatar"><img src="Photos/Gunnar.JPG" alt="Gunnar Simons"></div>
+            <p class="member__name">Gunnar Simons</p>
+            <p class="member__role">Vocals</p>
+          </div>
+          <div class="member">
+            <div class="member__avatar"><img src="Photos/Danny.JPG" alt="Danny Sachs"></div>
+            <p class="member__name">Danny Sachs</p>
+            <p class="member__role">Lead Guitar</p>
+          </div>
+          <div class="member">
+            <div class="member__avatar"><img src="Photos/Casey.JPG" alt="Casey Osborn"></div>
+            <p class="member__name">Casey Osborn</p>
+            <p class="member__role">Rhythm Guitar</p>
+          </div>
+          <div class="member">
+            <div class="member__avatar"><img src="Photos/Luke.jpeg" alt="Luke Taylor"></div>
+            <p class="member__name">Luke Taylor</p>
+            <p class="member__role">Bass</p>
+          </div>
+          <div class="member">
+            <div class="member__avatar"><img src="Photos/Kyle.JPG" alt="Kyle Marrapodi"></div>
+            <p class="member__name">Kyle Marrapodi</p>
+            <p class="member__role">Drums</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── COLLAGE ───── -->
+  <section class="collage" id="photos">
+    <div class="collage__grid">
+      <div class="collage__item collage__item--tall">
+        <img src="Photos/Buskill Misc 1.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 2.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 3.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item collage__item--wide">
+        <img src="Photos/Bushkill Misc 4.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 5.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 6.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item collage__item--wide">
+        <img src="Photos/Bushkill Misc 7.JPG" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 8.jpg" alt="Bushkill">
+      </div>
+      <div class="collage__item collage__item--tall">
+        <img src="Photos/Bushkill Misc 9.jpg" alt="Bushkill">
+      </div>
+      <div class="collage__item">
+        <img src="Photos/Bushkill Misc 10.jpg" alt="Bushkill">
+      </div>
+      <div class="collage__item collage__item--wide">
+        <img src="Photos/Bushkill Misc 11.jpg" alt="Bushkill">
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── TOUR ───── -->
+  <section class="tour" id="tour">
+    <div class="container">
+      <h2 class="section-title">Tour Dates</h2>
+      <p class="section-sub">Come see us live — we promise we're louder in person.</p>
+      <div class="tour-list">
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">02</span>
+            <span class="tour-date__month">JAN</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Red Lion</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">10:00 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">17</span>
+            <span class="tour-date__month">JAN</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Prohibition</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">9:30 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">24</span>
+            <span class="tour-date__month">JAN</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Red Lion</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">7:00 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">07</span>
+            <span class="tour-date__month">MAR</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Tiernan's</p>
+            <p class="tour-location">Stamford, CT</p>
+          </div>
+          <div class="tour-support">9:30 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">15</span>
+            <span class="tour-date__month">MAR</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Rivals</p>
+            <p class="tour-location">Easton, PA</p>
+          </div>
+          <div class="tour-support">10:00 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item tour-item--soldout">
+          <div class="tour-date">
+            <span class="tour-date__day">28</span>
+            <span class="tour-date__month">MAR</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Red Lion</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">7:00 PM</div>
+          <span class="btn btn--sm btn--sold">Past</span>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">18</span>
+            <span class="tour-date__month">APR</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Tiernan's</p>
+            <p class="tour-location">Stamford, CT</p>
+          </div>
+          <div class="tour-support">9:30 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">01</span>
+            <span class="tour-date__month">MAY</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Prohibition</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">9:30 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">09</span>
+            <span class="tour-date__month">MAY</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Battello</p>
+            <p class="tour-location">Jersey City, NJ</p>
+          </div>
+          <div class="tour-support">11:15 – 12:45</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">16</span>
+            <span class="tour-date__month">MAY</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Rivals</p>
+            <p class="tour-location">Easton, PA</p>
+          </div>
+          <div class="tour-support">10:00 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">08</span>
+            <span class="tour-date__month">AUG</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Red Lion</p>
+            <p class="tour-location">Manhattan, NY</p>
+          </div>
+          <div class="tour-support">7:00 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">05</span>
+            <span class="tour-date__month">SEP</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Crystal Springs</p>
+            <p class="tour-location">Beschner Wedding — NJ</p>
+          </div>
+          <div class="tour-support">TBD</div>
+          <span class="btn btn--sm btn--sold">Private</span>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">26</span>
+            <span class="tour-date__month">SEP</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Rivals</p>
+            <p class="tour-location">Easton, PA</p>
+          </div>
+          <div class="tour-support">10:00 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">10</span>
+            <span class="tour-date__month">OCT</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Split Rock Pelham Bay Golf Course</p>
+            <p class="tour-location">New York, NY</p>
+          </div>
+          <div class="tour-support">TBD</div>
+          <span class="btn btn--sm btn--sold">Private</span>
+        </div>
+
+        <div class="tour-item">
+          <div class="tour-date">
+            <span class="tour-date__day">31</span>
+            <span class="tour-date__month">OCT</span>
+          </div>
+          <div class="tour-info">
+            <p class="tour-venue">Rivals</p>
+            <p class="tour-location">Easton, PA</p>
+          </div>
+          <div class="tour-support">10:00 PM</div>
+          <a href="#" class="btn btn--sm">More Info</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── MERCH ───── -->
+  <section class="merch" id="merch">
+    <div class="container">
+      <h2 class="section-title">Merch</h2>
+      <p class="section-sub">Wear the noise.</p>
+      <div class="merch-grid">
+
+        <div class="merch-card">
+          <div class="merch-card__img">
+            <div class="merch-placeholder">T</div>
+          </div>
+          <div class="merch-card__info">
+            <p class="merch-card__name">Hollow Signal Tee</p>
+            <p class="merch-card__price">£20</p>
+            <a href="#" class="btn btn--primary btn--full">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="merch-card">
+          <div class="merch-card__img">
+            <div class="merch-placeholder">H</div>
+          </div>
+          <div class="merch-card__info">
+            <p class="merch-card__name">Static Wolves Hoodie</p>
+            <p class="merch-card__price">£45</p>
+            <a href="#" class="btn btn--primary btn--full">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="merch-card">
+          <div class="merch-card__img">
+            <div class="merch-placeholder">V</div>
+          </div>
+          <div class="merch-card__info">
+            <p class="merch-card__name">Hollow Signal Vinyl</p>
+            <p class="merch-card__price">£18</p>
+            <a href="#" class="btn btn--primary btn--full">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="merch-card">
+          <div class="merch-card__img">
+            <div class="merch-placeholder">B</div>
+          </div>
+          <div class="merch-card__info">
+            <p class="merch-card__name">Bundle: Vinyl + Tee</p>
+            <p class="merch-card__price">£32</p>
+            <a href="#" class="btn btn--primary btn--full">Buy Now</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="merch-store-link">
+        <a href="#" class="btn btn--ghost">View Full Store →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── MAILING LIST ───── -->
+  <section class="mailing">
+    <div class="container mailing__inner">
+      <h2>Stay in the loop</h2>
+      <p>New shows, exclusive merch drops, and behind-the-scenes content — straight to your inbox.</p>
+      <form class="mailing__form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+      <p class="mailing__note" id="mailing-msg"></p>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo"><img src="Photos/Bushkill Logo - Clear.png" alt="Bushkill"></div>
+      <div class="socials">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/bushkillband" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@bushkillofficial?_r=1&_t=zp-925hu0gnsal" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <!-- Twitter/X -->
+        <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@BushkillOfficial" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <!-- Venmo -->
+        <a href="https://venmo.com/degensband" class="social-link" target="_blank" rel="noopener" aria-label="Venmo">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.014 1.002C19.668 2.098 19.95 3.225 19.95 4.65c0 4.09-3.492 9.395-6.331 13.13H7.242L4.986 2.292l5.567-.53 1.188 9.528c1.11-1.812 2.481-4.65 2.481-6.588 0-1.061-.183-1.782-.465-2.374z"/></svg>
+        </a>
+        <!-- Spotify -->
+        <a href="https://open.spotify.com/artist/7tLMjeKVvCEmlQkwwB6yOu?si=Ss2PYlq4R4SSPa1SwleepQ" class="social-link" target="_blank" rel="noopener" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
+      </div>
+      <p class="footer__copy">© 2026 Degenerate Media LLC. All rights reserved.</p>
+      <p class="footer__contact">Bookings & Press: <a href="mailto:bushkillofficial@gmail.com">bushkillofficial@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
