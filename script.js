@@ -45,7 +45,7 @@ document.querySelectorAll('.tracklist__item').forEach(item => {
 ───────────────────────────────────────── */
 function handleSubscribe(e) {
   e.preventDefault();
-  const msg = document.getElementById('mailing-msg');
+  const msg = document.getElementById('newsletter-msg');
   msg.textContent = "I didn't think anyone would actually sign up... it's not rdy yet.";
   e.target.reset();
 }

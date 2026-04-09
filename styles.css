@@ -357,8 +357,8 @@ img { display: block; width: 100%; object-fit: cover; }
   margin-bottom: 16px;
 }
 
-.tracklist { list-style: none; }
-.tracklist__item {
+.songlist { list-style: none; }
+.songlist__item {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -369,12 +369,12 @@ img { display: block; width: 100%; object-fit: cover; }
   transition: color 0.2s;
   cursor: default;
 }
-.tracklist__item:last-child { border-bottom: none; }
-.tracklist__item:hover, .tracklist__item.active { color: var(--white); }
-.tracklist__item.active .track-name { color: var(--accent); }
-.track-num { font-size: 0.75rem; width: 24px; color: var(--border); }
-.track-name { flex: 1; }
-.track-dur { font-size: 0.8rem; }
+.songlist__item:last-child { border-bottom: none; }
+.songlist__item:hover, .songlist__item.active { color: var(--white); }
+.songlist__item.active .song-name { color: var(--accent); }
+.song-num { font-size: 0.75rem; width: 24px; color: var(--border); }
+.song-name { flex: 1; }
+.song-dur { font-size: 0.8rem; }
 
 /* ─────────────────────────────────────────
    ABOUT
@@ -550,30 +550,30 @@ img { display: block; width: 100%; object-fit: cover; }
 /* ─────────────────────────────────────────
    MAILING LIST
 ───────────────────────────────────────── */
-.mailing {
+.newsletter {
   padding: 80px 0;
   background: linear-gradient(135deg, #071507, #0a0f0a);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.mailing__inner {
+.newsletter__inner {
   max-width: 560px;
   text-align: center;
 }
-.mailing h2 {
+.newsletter h2 {
   font-family: var(--font-display);
   font-size: 2.5rem;
   margin-bottom: 12px;
   letter-spacing: 0.04em;
 }
-.mailing p { color: var(--muted); margin-bottom: 32px; }
-.mailing__form {
+.newsletter p { color: var(--muted); margin-bottom: 32px; }
+.newsletter__form {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
-.mailing__form input {
+.newsletter__form input {
   flex: 1;
   min-width: 200px;
   padding: 12px 16px;
@@ -585,9 +585,9 @@ img { display: block; width: 100%; object-fit: cover; }
   font-size: 0.95rem;
   transition: border-color 0.2s;
 }
-.mailing__form input::placeholder { color: var(--muted); }
-.mailing__form input:focus { outline: none; border-color: var(--accent); }
-.mailing__note { margin-top: 12px; font-size: 0.85rem; color: #4caf50; }
+.newsletter__form input::placeholder { color: var(--muted); }
+.newsletter__form input:focus { outline: none; border-color: var(--accent); }
+.newsletter__note { margin-top: 12px; font-size: 0.85rem; color: #4caf50; }
 
 /* ─────────────────────────────────────────
    FOOTER
@@ -652,7 +652,7 @@ img { display: block; width: 100%; object-fit: cover; }
 
   .merch-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .mailing__form { flex-direction: column; }
+  .newsletter__form { flex-direction: column; }
 
   .hero__title { font-size: clamp(4rem, 20vw, 8rem); }
 }
