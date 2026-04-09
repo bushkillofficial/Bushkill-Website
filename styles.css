@@ -700,7 +700,7 @@ img { display: block; width: 100%; object-fit: cover; }
 
   /* HERO */
   .hero { padding-bottom: 80px; }
-  .hero__content { padding: 0 20px 80px; }
+  .hero__content { padding: 80px 20px 80px; }
   .hero__band-name {
     font-size: clamp(2.5rem, 9vw, 6rem);
     letter-spacing: 0.1em;
