@@ -767,6 +767,10 @@ img { display: block; width: 100%; object-fit: cover; }
     margin-left: auto;
     margin-right: auto;
   }
+  .merch-card:nth-child(2) .merch-card__img img {
+    object-fit: contain;
+    object-position: center center;
+  }
 
   /* NEWSLETTER */
   .newsletter__form { flex-direction: column; }
