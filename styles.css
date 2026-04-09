@@ -685,7 +685,11 @@ img { display: block; width: 100%; object-fit: cover; }
 
   /* NAV */
   .nav { padding: 12px 20px; }
-  .nav.scrolled { padding: 10px 20px; }
+  .nav.scrolled {
+    padding: 10px 20px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .nav__logo img { height: 52px; }
   .nav__links {
     display: none;

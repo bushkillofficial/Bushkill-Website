@@ -64,12 +64,12 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
 
 revealEls.forEach((el, i) => {
   el.style.opacity    = '0';
-  el.style.transform  = 'translateY(20px)';
-  el.style.transition = `opacity 0.5s ease ${i * 0.04}s, transform 0.5s ease ${i * 0.04}s`;
+  el.style.transform  = 'translateY(14px)';
+  el.style.transition = `opacity 0.4s ease ${i * 0.02}s, transform 0.4s ease ${i * 0.02}s`;
   observer.observe(el);
 });
 
