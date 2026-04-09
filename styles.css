@@ -573,6 +573,9 @@ img { display: block; width: 100%; object-fit: cover; }
 .merch-card:hover .merch-card__img img {
   transform: scale(1.04);
 }
+.merch-card:nth-child(2) .merch-card__img img {
+  object-position: center center;
+}
 .merch-card:nth-child(3) .merch-card__img img {
   object-fit: contain;
   object-position: center center;
@@ -699,7 +702,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 1001; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; }
+  .hero { padding-bottom: 80px; background-position: center top; }
   .hero__content { padding: 80px 20px 80px; }
   .hero__band-name {
     font-size: clamp(2.5rem, 9vw, 6rem);
@@ -732,8 +735,8 @@ img { display: block; width: 100%; object-fit: cover; }
   .songlist__item { gap: 12px; padding: 10px 0; font-size: 0.85rem; }
 
   /* ABOUT */
-  .members { gap: 20px; margin-top: 36px; }
-  .member  { min-width: 80px; max-width: 120px; }
+  .members { gap: 16px; margin-top: 36px; }
+  .member  { flex: 0 0 calc(33.33% - 11px); min-width: 0; max-width: none; }
 
   /* COLLAGE */
   .collage__grid { column-count: 2; }
@@ -789,9 +792,11 @@ img { display: block; width: 100%; object-fit: cover; }
 
   .collage__grid { column-count: 1; }
 
-  .members { gap: 16px; justify-content: center; }
-  .member  { min-width: 70px; max-width: 100px; }
-  .member__avatar { width: 80px; height: 80px; }
+  .members { gap: 12px; justify-content: center; }
+  .member  { flex: 0 0 calc(33.33% - 9px); min-width: 0; max-width: none; }
+  .member__avatar { width: 72px; height: 72px; }
+  .member__name { font-size: 0.72rem; }
+  .member__role { font-size: 0.68rem; }
 
   .merch-card { max-width: 100%; }
   .merch-card__img { height: 220px; }
