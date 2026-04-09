@@ -61,6 +61,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-x: clip; /* prevents iOS Safari touch-offset bug when scrolled */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -124,7 +125,7 @@ img { display: block; width: 100%; object-fit: cover; }
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,7 +170,7 @@ img { display: block; width: 100%; object-fit: cover; }
   transition: background 0.2s !important;
 }
 .nav__cta:hover { background: #2d5c32 !important; color: #fff !important; }
-.nav__burger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+.nav__burger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 10px; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .nav__burger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
 
 /* ─────────────────────────────────────────
@@ -695,11 +696,11 @@ img { display: block; width: 100%; object-fit: cover; }
     align-items: center;
     justify-content: center;
     gap: 36px;
-    z-index: 999;
+    z-index: 9998;
   }
   .nav__links.open { display: flex; }
   .nav__links a { font-size: 1.1rem; }
-  .nav__burger { display: flex; z-index: 1001; position: relative; }
+  .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
   .hero { padding-bottom: 80px; background-position: center top; }
@@ -736,7 +737,7 @@ img { display: block; width: 100%; object-fit: cover; }
 
   /* ABOUT */
   .members { gap: 16px; margin-top: 36px; }
-  .member  { flex: 0 0 calc(33.33% - 11px); min-width: 0; max-width: none; }
+  .member  { flex: 0 0 30%; min-width: 0; max-width: none; }
 
   /* COLLAGE */
   .collage__grid { column-count: 2; }
@@ -793,7 +794,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .collage__grid { column-count: 1; }
 
   .members { gap: 12px; justify-content: center; }
-  .member  { flex: 0 0 calc(33.33% - 9px); min-width: 0; max-width: none; }
+  .member  { flex: 0 0 30%; min-width: 0; max-width: none; }
   .member__avatar { width: 72px; height: 72px; }
   .member__name { font-size: 0.72rem; }
   .member__role { font-size: 0.68rem; }
