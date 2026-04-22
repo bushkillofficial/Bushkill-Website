@@ -709,7 +709,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 145% auto; background-position: 5% top; }
+  .hero { padding-bottom: 80px; background: url('Photos/Bushkill Background Vertical.png') 5% 0% / 145% auto no-repeat !important; }
   .hero__content { padding: 80px 12px 80px; max-width: 100%; width: 100%; }
   .hero__band-name {
     font-size: clamp(3rem, 12vw, 6rem);
@@ -783,6 +783,9 @@ img { display: block; width: 100%; object-fit: cover; }
   .newsletter__form input { min-width: 0; width: 100%; }
   .newsletter__form .btn { width: 100%; }
   .newsletter h2 { font-size: 2rem; }
+
+  /* FOOTER SOCIALS — 4 + 3 layout */
+  .socials { max-width: 224px; gap: 16px; margin-left: auto; margin-right: auto; }
 }
 
 /* ── Small phones (≤ 480px) ── */
