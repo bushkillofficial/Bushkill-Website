@@ -41,39 +41,32 @@ document.querySelectorAll('.songlist__item').forEach(item => {
 });
 
 /* ─────────────────────────────────────────
-   SPOTIFY — iFrame API: one-at-a-time + reset on end
+   SPOTIFY — one-at-a-time via postMessage
 ───────────────────────────────────────── */
-const TRACK_IDS = [
-  '3pDjocutnF0BxJceepUgQT', // Homicidal Queen
-  '2KRrAbO3xhwoxheMPydavo', // Curley's Diner 2
-  '3iRFQinadkjKlL2iUhmOV7', // Drifting Away
-  '2BOQXXiN5ThvtbVEYflhfk', // Hit This
-  '6CId7tiRS4T3Wfk22tXTm5', // Landing Strip
-  '7l6fpU2rYIBEvjj5gsBUXE', // Snoopy
-];
+const spotifyFrames = Array.from({ length: 6 }, (_, i) => document.getElementById(`sp-track-${i}`)).filter(Boolean);
 
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-  const controllers = [];
+window.addEventListener('message', (e) => {
+  if (e.origin !== 'https://open.spotify.com') return;
+  let data;
+  try { data = JSON.parse(e.data); } catch { return; }
+  if (data.type !== 'playback_update') return;
 
-  TRACK_IDS.forEach((id, index) => {
-    const el = document.getElementById(`sp-track-${index}`);
-    if (!el) return;
-
-    IFrameAPI.createController(el, { uri: `spotify:track:${id}`, height: '80' }, (ctrl) => {
-      controllers[index] = ctrl;
-
-      ctrl.addListener('playback_update', ({ data }) => {
-        if (!data.isPaused) {
-          // Pause every other track
-          controllers.forEach((c, i) => { if (i !== index && c) c.pause(); });
-        } else if (data.duration > 0 && data.position >= data.duration - 1.5) {
-          // Preview ended — reload to restore the original thumbnail
-          ctrl.loadUri(`spotify:track:${id}`);
-        }
-      });
+  if (!data.payload.is_paused) {
+    // A track started — reset every other iframe by reloading its src
+    spotifyFrames.forEach(frame => {
+      if (frame.contentWindow !== e.source) {
+        frame.src = frame.src;
+      }
     });
-  });
-};
+  } else if (data.payload.duration > 0 && data.payload.position >= data.payload.duration - 1.5) {
+    // Preview ended — reload the finished iframe to restore the thumbnail
+    spotifyFrames.forEach(frame => {
+      if (frame.contentWindow === e.source) {
+        frame.src = frame.src;
+      }
+    });
+  }
+});
 
 /* ─────────────────────────────────────────
    MAILING LIST — form submit

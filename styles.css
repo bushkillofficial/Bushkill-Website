@@ -709,7 +709,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 160% auto; background-position: 20% top; }
+  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 145% auto; background-position: 5% top; }
   .hero__content { padding: 80px 12px 80px; max-width: 100%; width: 100%; }
   .hero__band-name {
     font-size: clamp(3rem, 12vw, 6rem);
