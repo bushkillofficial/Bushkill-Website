@@ -242,11 +242,17 @@ img { display: block; width: 100%; object-fit: cover; }
 
 .hero__band-name {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 8rem);
+  font-size: clamp(6rem, 20vw, 14rem);
   letter-spacing: 0.2em;
   color: var(--white);
   margin-bottom: 0;
   line-height: 1;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding-left: 0.2em;
 }
 .hero__formerly {
   font-size: 0.95rem;
@@ -709,10 +715,10 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background: url('Photos/Bushkill Background Vertical.png') 5% 0% / 145% auto no-repeat !important; }
+  .hero { padding-bottom: 80px; background: url('Photos/Bushkill Background Vertical.png') 50% 0% / 120% auto no-repeat !important; }
   .hero__content { padding: 80px 12px 80px; max-width: 100%; width: 100%; }
   .hero__band-name {
-    font-size: clamp(3rem, 12vw, 6rem);
+    font-size: clamp(4.5rem, 20vw, 9rem);
     letter-spacing: 0.1em;
   }
   .hero__formerly { font-size: 1rem; margin-bottom: 20px; }
@@ -797,7 +803,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__logo img { height: 44px; }
 
   .hero__band-name {
-    font-size: clamp(2rem, 8.5vw, 4rem);
+    font-size: clamp(3.2rem, 15vw, 6rem);
     letter-spacing: 0.08em;
   }
   .hero__title { font-size: clamp(2.5rem, 13vw, 5rem); }
