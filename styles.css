@@ -184,7 +184,7 @@ img { display: block; width: 100%; object-fit: cover; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('Photos/Bushkill Background Vertical.png') center top/cover no-repeat;
+  background: url('Photos/Bushkill Background.jpg') center/cover no-repeat;
   overflow: hidden;
   padding-bottom: 100px;
 }
@@ -479,7 +479,7 @@ img { display: block; width: 100%; object-fit: cover; }
   display: block;
   transition: transform 0.4s ease;
 }
-.collage__item:hover img { transform: scale(1.04); }
+.collage__item:hover img { transform: scale(1.35); }
 
 /* ─────────────────────────────────────────
    TOUR
@@ -707,7 +707,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background-size: 100% auto; background-position: center top; }
+  .hero { padding-bottom: 80px; background-position: center top; }
   .hero__content { padding: 80px 20px 80px; }
   .hero__band-name {
     font-size: clamp(2.5rem, 9vw, 6rem);
