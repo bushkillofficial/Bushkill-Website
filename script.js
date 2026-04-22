@@ -71,11 +71,14 @@ window.addEventListener('message', (e) => {
 /* ─────────────────────────────────────────
    MAILING LIST — form submit
 ───────────────────────────────────────── */
-function handleSubscribe(e) {
-  e.preventDefault();
-  const msg = document.getElementById('newsletter-msg');
-  msg.textContent = "I didn't think anyone would actually sign up... it's not rdy yet.";
-  e.target.reset();
+const newsletterForm = document.querySelector('.newsletter__form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('newsletter-msg');
+    msg.textContent = "I didn't think anyone would actually sign up... it's not rdy yet.";
+    e.target.reset();
+  });
 }
 
 /* ─────────────────────────────────────────
