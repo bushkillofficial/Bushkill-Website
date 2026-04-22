@@ -709,20 +709,20 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 120% auto; background-position: 40% top; }
-  .hero__content { padding: 80px 20px 80px; }
+  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 160% auto; background-position: 20% top; }
+  .hero__content { padding: 80px 12px 80px; max-width: 100%; width: 100%; }
   .hero__band-name {
-    font-size: clamp(2.5rem, 9vw, 6rem);
+    font-size: clamp(3rem, 12vw, 6rem);
     letter-spacing: 0.1em;
   }
-  .hero__formerly { font-size: 0.85rem; margin-bottom: 20px; }
-  .hero__eyebrow { font-size: 0.85rem; letter-spacing: 0.15em; gap: 8px; }
+  .hero__formerly { font-size: 1rem; margin-bottom: 20px; }
+  .hero__eyebrow { font-size: 1rem; letter-spacing: 0.15em; gap: 8px; }
   .hero__eyebrow::before,
   .hero__eyebrow::after { width: 20px; }
-  .hero__title { font-size: clamp(3rem, 14vw, 7rem); }
-  .hero__sub { font-size: 0.95rem; margin-bottom: 28px; }
+  .hero__title { font-size: clamp(3.8rem, 18vw, 7rem); }
+  .hero__sub { font-size: 1.1rem; margin-bottom: 28px; }
   .hero__actions { flex-direction: column; align-items: center; gap: 12px; }
-  .hero__actions .btn { width: 100%; max-width: 280px; text-align: center; }
+  .hero__actions .btn { width: 100%; max-width: 100%; text-align: center; }
 
   /* SECTION SPACING */
   .listen     { padding: 72px 0; }
