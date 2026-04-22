@@ -395,6 +395,8 @@ img { display: block; width: 100%; object-fit: cover; }
   margin-bottom: 16px;
 }
 
+.spotify-tracks { display: flex; flex-direction: column; gap: 4px; }
+.spotify-tracks iframe { border-radius: 8px; display: block; }
 .songlist { list-style: none; }
 .songlist__item {
   display: flex;
@@ -572,7 +574,7 @@ img { display: block; width: 100%; object-fit: cover; }
   transition: transform 0.3s ease;
 }
 .merch-card:hover .merch-card__img img {
-  transform: scale(1.04);
+  transform: scale(1.35);
 }
 .merch-card:nth-child(2) .merch-card__img img {
   object-position: center center;
@@ -707,7 +709,7 @@ img { display: block; width: 100%; object-fit: cover; }
   .nav__burger { display: flex; z-index: 10000; position: relative; }
 
   /* HERO */
-  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 100% auto; background-position: center top; }
+  .hero { padding-bottom: 80px; background-image: url('Photos/Bushkill Background Vertical.png'); background-size: 120% auto; background-position: 40% top; }
   .hero__content { padding: 80px 20px 80px; }
   .hero__band-name {
     font-size: clamp(2.5rem, 9vw, 6rem);

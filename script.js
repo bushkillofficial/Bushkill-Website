@@ -41,6 +41,41 @@ document.querySelectorAll('.songlist__item').forEach(item => {
 });
 
 /* ─────────────────────────────────────────
+   SPOTIFY — iFrame API: one-at-a-time + reset on end
+───────────────────────────────────────── */
+const TRACK_IDS = [
+  '3pDjocutnF0BxJceepUgQT', // Homicidal Queen
+  '2KRrAbO3xhwoxheMPydavo', // Curley's Diner 2
+  '3iRFQinadkjKlL2iUhmOV7', // Drifting Away
+  '2BOQXXiN5ThvtbVEYflhfk', // Hit This
+  '6CId7tiRS4T3Wfk22tXTm5', // Landing Strip
+  '7l6fpU2rYIBEvjj5gsBUXE', // Snoopy
+];
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  const controllers = [];
+
+  TRACK_IDS.forEach((id, index) => {
+    const el = document.getElementById(`sp-track-${index}`);
+    if (!el) return;
+
+    IFrameAPI.createController(el, { uri: `spotify:track:${id}`, height: '80' }, (ctrl) => {
+      controllers[index] = ctrl;
+
+      ctrl.addListener('playback_update', ({ data }) => {
+        if (!data.isPaused) {
+          // Pause every other track
+          controllers.forEach((c, i) => { if (i !== index && c) c.pause(); });
+        } else if (data.duration > 0 && data.position >= data.duration - 1.5) {
+          // Preview ended — reload to restore the original thumbnail
+          ctrl.loadUri(`spotify:track:${id}`);
+        }
+      });
+    });
+  });
+};
+
+/* ─────────────────────────────────────────
    MAILING LIST — form submit
 ───────────────────────────────────────── */
 function handleSubscribe(e) {
