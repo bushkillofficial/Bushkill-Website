@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: script-src 'self'; connect-src 'self'
+  Content-Security-Policy: script-src 'self' https://open.spotify.com; connect-src 'self'; frame-src https://open.spotify.com

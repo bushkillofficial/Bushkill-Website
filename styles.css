@@ -103,6 +103,7 @@ img { display: block; width: 100%; object-fit: cover; }
 .btn--ghost:hover { background: var(--white); color: var(--black); }
 
 .btn--sm { padding: 8px 18px; font-size: 0.8rem; }
+.tour-item a.btn--sm { border-color: var(--accent); }
 .btn--full { width: 100%; text-align: center; }
 .btn--sold { background: var(--border); border-color: var(--border); color: var(--muted); cursor: default; }
 .btn--sold:hover { transform: none; }
@@ -403,6 +404,21 @@ img { display: block; width: 100%; object-fit: cover; }
 
 .spotify-tracks { display: flex; flex-direction: column; gap: 4px; }
 .spotify-tracks iframe { border-radius: 8px; display: block; }
+
+/* Placeholder shown while Spotify IFrame API initialises */
+.spotify-embed-placeholder {
+  width: 100%;
+  height: 152px;
+  border-radius: 8px;
+  background: #181818;
+  animation: sp-pulse 1.6s ease-in-out infinite;
+}
+.spotify-embed-placeholder:has(iframe) { animation: none; background: none; }
+@keyframes sp-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
 .songlist { list-style: none; }
 .songlist__item {
   display: flex;
@@ -498,6 +514,50 @@ img { display: block; width: 100%; object-fit: cover; }
 }
 
 .tour-list { display: flex; flex-direction: column; gap: 0; }
+
+/* ── Past shows collapsible ── */
+.past-shows {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 20px;
+  margin-bottom: 32px;
+}
+.past-shows__summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  user-select: none;
+}
+.past-shows__summary::-webkit-details-marker { display: none; }
+.past-shows__summary::marker { display: none; }
+.past-shows__summary:hover { color: var(--white); }
+.past-shows__badge {
+  background: var(--border);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+.past-shows__chevron {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: transform 0.25s ease;
+}
+.past-shows[open] .past-shows__chevron { transform: rotate(180deg); }
+.past-shows__list .tour-item:first-child { border-top: none; }
+.past-shows__list .tour-item:last-child  { border-bottom: none; }
 
 .tour-item {
   display: grid;

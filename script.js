@@ -41,32 +41,38 @@ document.querySelectorAll('.songlist__item').forEach(item => {
 });
 
 /* ─────────────────────────────────────────
-   SPOTIFY — one-at-a-time via postMessage
+   SPOTIFY — plain iframes, lazy-loaded on scroll
 ───────────────────────────────────────── */
-const spotifyFrames = Array.from({ length: 6 }, (_, i) => document.getElementById(`sp-track-${i}`)).filter(Boolean);
+const TRACK_IDS = [
+  '3pDjocutnF0BxJceepUgQT',
+  '2KRrAbO3xhwoxheMPydavo',
+  '3iRFQinadkjKlL2iUhmOV7',
+  '2BOQXXiN5ThvtbVEYflhfk',
+  '6CId7tiRS4T3Wfk22tXTm5',
+  '7l6fpU2rYIBEvjj5gsBUXE',
+];
 
-window.addEventListener('message', (e) => {
-  if (e.origin !== 'https://open.spotify.com') return;
-  let data;
-  try { data = JSON.parse(e.data); } catch { return; }
-  if (data.type !== 'playback_update') return;
-
-  if (!data.payload.is_paused) {
-    // A track started — reset every other iframe by reloading its src
-    spotifyFrames.forEach(frame => {
-      if (frame.contentWindow !== e.source) {
-        frame.src = frame.src;
-      }
-    });
-  } else if (data.payload.duration > 0 && data.payload.position >= data.payload.duration - 1.5) {
-    // Preview ended — reload the finished iframe to restore the thumbnail
-    spotifyFrames.forEach(frame => {
-      if (frame.contentWindow === e.source) {
-        frame.src = frame.src;
-      }
-    });
-  }
-});
+const listenSection = document.getElementById('listen');
+if (listenSection) {
+  const spotifyObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      TRACK_IDS.forEach((id, i) => {
+        const el = document.getElementById(`embed-track-${i}`);
+        if (!el) return;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://open.spotify.com/embed/track/${id}?utm_source=generator&theme=0`;
+        iframe.width = '100%';
+        iframe.height = '152';
+        iframe.frameBorder = '0';
+        iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+        iframe.style.cssText = 'border-radius:8px;display:block;';
+        el.replaceChildren(iframe);
+      });
+      spotifyObserver.disconnect();
+    }
+  }, { rootMargin: '400px' });
+  spotifyObserver.observe(listenSection);
+}
 
 /* ─────────────────────────────────────────
    MAILING LIST — form submit
