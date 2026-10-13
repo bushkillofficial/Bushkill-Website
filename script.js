@@ -30,6 +30,38 @@ links.querySelectorAll('a').forEach(a => {
   });
 });
 
+// Smooth-scroll nav links — forces lazy images above the target to load first
+// so layout shift from the photo collage doesn't land the scroll in the wrong section
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+
+    const doScroll = () => target.scrollIntoView({ behavior: 'smooth' });
+
+    const pending = Array.from(document.querySelectorAll('img')).filter(img =>
+      !img.complete &&
+      !!(img.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING)
+    );
+
+    if (!pending.length) { doScroll(); return; }
+
+    // Unblock any lazy images so they actually start fetching
+    pending.forEach(img => { img.loading = 'eager'; });
+
+    let n = pending.length;
+    const done = () => { if (--n === 0) doScroll(); };
+    pending.forEach(img => {
+      img.addEventListener('load',  done, { once: true });
+      img.addEventListener('error', done, { once: true });
+    });
+
+    // Fallback: scroll regardless after 800 ms in case a load event never fires
+    setTimeout(() => { if (n > 0) { n = 0; doScroll(); } }, 800);
+  });
+});
+
 /* ─────────────────────────────────────────
    TRACKLIST — click to activate
 ───────────────────────────────────────── */
@@ -86,6 +118,27 @@ if (newsletterForm) {
     e.target.reset();
   });
 }
+
+/* ─────────────────────────────────────────
+   TOUR — auto-archive past shows
+───────────────────────────────────────── */
+(function autoArchivePastShows() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const upcomingList = document.querySelector('.tour-list:not(.past-shows__list)');
+  const pastList     = document.querySelector('.past-shows__list');
+  if (!upcomingList || !pastList) return;
+
+  Array.from(upcomingList.querySelectorAll('.tour-item[data-date]')).forEach(item => {
+    if (new Date(item.dataset.date) < today) {
+      item.classList.add('tour-item--soldout');
+      const btn = item.querySelector('.btn--sm');
+      if (btn) btn.outerHTML = '<span class="btn btn--sm btn--sold">Past</span>';
+      pastList.appendChild(item);
+    }
+  });
+})();
 
 /* ─────────────────────────────────────────
    SCROLL REVEAL — fade-in on scroll
