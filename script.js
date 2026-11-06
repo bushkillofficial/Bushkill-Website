@@ -19,7 +19,7 @@ burger.addEventListener('click', () => {
   spans[2].style.transform = isOpen ? 'translateY(-7px) rotate(-45deg)' : '';
 });
 
-// Close mobile menu when a link is clicked
+// Close mobile menu + scroll to target, offset by actual nav height
 links.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     links.classList.remove('open');
@@ -27,6 +27,16 @@ links.querySelectorAll('a').forEach(a => {
       s.style.transform = '';
       s.style.opacity   = '';
     });
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   });
 });
 
