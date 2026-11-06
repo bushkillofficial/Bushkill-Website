@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:open.spotify.com)"
+      "WebFetch(domain:open.spotify.com)",
+      "PowerShell(python --version)",
+      "PowerShell(py --version)",
+      "PowerShell(node --version)",
+      "Bash(git fetch *)",
+      "Bash(gh api *)"
     ]
   }
 }
