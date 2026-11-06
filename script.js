@@ -30,38 +30,6 @@ links.querySelectorAll('a').forEach(a => {
   });
 });
 
-// Smooth-scroll nav links — forces lazy images above the target to load first
-// so layout shift from the photo collage doesn't land the scroll in the wrong section
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (!target) return;
-    e.preventDefault();
-
-    const doScroll = () => target.scrollIntoView({ behavior: 'smooth' });
-
-    const pending = Array.from(document.querySelectorAll('img')).filter(img =>
-      !img.complete &&
-      !!(img.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING)
-    );
-
-    if (!pending.length) { doScroll(); return; }
-
-    // Unblock any lazy images so they actually start fetching
-    pending.forEach(img => { img.loading = 'eager'; });
-
-    let n = pending.length;
-    const done = () => { if (--n === 0) doScroll(); };
-    pending.forEach(img => {
-      img.addEventListener('load',  done, { once: true });
-      img.addEventListener('error', done, { once: true });
-    });
-
-    // Fallback: scroll regardless after 800 ms in case a load event never fires
-    setTimeout(() => { if (n > 0) { n = 0; doScroll(); } }, 800);
-  });
-});
-
 /* ─────────────────────────────────────────
    TRACKLIST — click to activate
 ───────────────────────────────────────── */

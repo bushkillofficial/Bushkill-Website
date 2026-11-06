@@ -52,7 +52,7 @@
   --max-w: 1100px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
 body {
   background: var(--black);
@@ -500,6 +500,7 @@ img { display: block; width: 100%; object-fit: cover; }
 .collage__item img {
   width: 100%;
   height: auto;
+  aspect-ratio: auto 3/2;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -751,6 +752,8 @@ img { display: block; width: 100%; object-fit: cover; }
 /* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
 
+  html { scroll-padding-top: 80px; }
+
   /* NAV */
   .nav { padding: 12px 20px; }
   .nav.scrolled {
@@ -856,6 +859,8 @@ img { display: block; width: 100%; object-fit: cover; }
 
 /* ── Small phones (≤ 480px) ── */
 @media (max-width: 480px) {
+  html { scroll-padding-top: 65px; }
+
   .container { padding: 0 16px; }
 
   .nav { padding: 10px 16px; }
