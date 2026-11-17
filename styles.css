@@ -475,7 +475,7 @@ img { display: block; width: 100%; object-fit: cover; }
   object-position: center top;
 }
 .member:nth-child(1) .member__avatar img { object-position: center 28%; }
-.member:nth-child(3) .member__avatar img { object-position: center 18%; }
+.member:nth-child(2) .member__avatar img { object-position: center 18%; }
 .member__name { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
 .member__role { font-size: 0.8rem; color: var(--muted); }
 
