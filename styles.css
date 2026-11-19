@@ -595,6 +595,7 @@ img { display: block; width: 100%; object-fit: cover; }
   letter-spacing: 0.15em;
   color: var(--muted);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .tour-info {}
@@ -826,7 +827,7 @@ img { display: block; width: 100%; object-fit: cover; }
 
   /* TOUR — 2-column mobile layout */
   .tour-item {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 70px 1fr;
     gap: 0 12px;
     padding: 16px 0;
   }
